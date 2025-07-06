@@ -3,8 +3,9 @@
 <head>
   <title>Cycle Tracker</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, #fdf6f0, #ffeaea);
       padding: 20px;
       color: #333;
@@ -25,11 +26,13 @@
       padding: 12px;
       border-radius: 8px;
       margin-bottom: 20px;
+      font-weight: 600;
     }
     label {
       margin-top: 10px;
       display: block;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 0.95rem;
     }
     input, button {
       width: 100%;
@@ -38,11 +41,13 @@
       border-radius: 8px;
       border: 1px solid #ddd;
       box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
     button {
       background-color: #f7c8c8;
       border: none;
       margin-top: 15px;
+      font-weight: 600;
     }
     button:hover {
       background-color: #f5b5b5;
@@ -55,15 +60,12 @@
       border-radius: 8px;
       text-align: center;
       animation: fadeIn 1s ease;
+      font-weight: 500;
     }
-    .emoji-bounce {
-      font-size: 2rem;
-      display: inline-block;
-      animation: bounce 1s infinite alternate;
-    }
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
+    .flower-img {
+      width: 80px;
+      margin: 10px auto;
+      display: block;
     }
     @keyframes fadeIn {
       0% { opacity: 0; }
@@ -73,7 +75,8 @@
 </head>
 <body>
   <div class="container">
-    <h2>Cycle Tracker <span class="emoji-bounce">🩸</span></h2>
+    <img src="flower1.png" class="flower-img" alt="flowers">
+    <h2>Cycle Tracker 🩸</h2>
     <div id="step1">
       <label>Enter your current cycle day:</label>
       <input type="number" id="currentDay" value="1">
@@ -82,6 +85,7 @@
       <button onclick="saveCurrentDay()">Save</button>
     </div>
     <div id="step2" style="display:none;">
+      <img src="flower2.png" class="flower-img" alt="flowers">
       <label>Select a future date:</label>
       <input type="date" id="futureDate">
       <button onclick="calculateFutureCycleDay()">Calculate</button>
@@ -143,3 +147,4 @@
   </script>
 </body>
 </html>
+
