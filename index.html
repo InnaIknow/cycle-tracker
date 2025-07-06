@@ -4,78 +4,21 @@
   <title>Cycle Tracker</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #fdf6f0, #ffeaea);
-      padding: 20px;
-      color: #333;
-      margin: 0;
-    }
-    .container {
-      max-width: 400px;
-      margin: 20px auto;
-      background: linear-gradient(135deg, #ffffff, #ffeaea);
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
-      animation: fadeIn 1s ease;
-    }
-    h2 {
-      text-align: center;
-      background: #fde2e2;
-      padding: 12px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      font-weight: 600;
-    }
-    label {
-      margin-top: 10px;
-      display: block;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    input, button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    button {
-      background-color: #f7c8c8;
-      border: none;
-      margin-top: 15px;
-      font-weight: 600;
-    }
-    button:hover {
-      background-color: #f5b5b5;
-      transform: scale(1.05);
-    }
-    .result {
-      margin-top: 20px;
-      background: #fff0f0;
-      padding: 15px;
-      border-radius: 8px;
-      text-align: center;
-      animation: fadeIn 1s ease;
-      font-weight: 500;
-    }
-    .flower-img {
-      width: 80px;
-      margin: 10px auto;
-      display: block;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
+    body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #fdf6f0, #ffeaea); padding: 20px; color: #333; margin: 0; }
+    .container { max-width: 400px; margin: 20px auto; background: linear-gradient(135deg, #ffffff, #ffeaea); border-radius: 12px; padding: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.15); animation: fadeIn 1s ease; }
+    h2 { text-align: center; background: #fde2e2; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-weight: 600; }
+    label { margin-top: 10px; display: block; font-weight: 600; font-size: 0.95rem; }
+    input, button { width: 100%; padding: 10px; margin-top: 8px; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    button { background-color: #f7c8c8; border: none; margin-top: 15px; font-weight: 600; }
+    button:hover { background-color: #f5b5b5; transform: scale(1.05); }
+    .result { margin-top: 20px; background: #fff0f0; padding: 15px; border-radius: 8px; text-align: center; animation: fadeIn 1s ease; font-weight: 500; }
+    .flower-img { width: 80px; margin: 10px auto; display: block; }
+    @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="flower1.png" class="flower-img" alt="flowers">
+    <img src="https://github.com/InnaIknow/cycle-tracker/blob/main/flower1.png?raw=true" class="flower-img" alt="flowers">
     <h2>Cycle Tracker 🩸</h2>
     <div id="step1">
       <label>Enter your current cycle day:</label>
@@ -85,7 +28,7 @@
       <button onclick="saveCurrentDay()">Save</button>
     </div>
     <div id="step2" style="display:none;">
-      <img src="flower2.png" class="flower-img" alt="flowers">
+      <img src="https://github.com/InnaIknow/cycle-tracker/blob/main/flower2.png?raw=true" class="flower-img" alt="flowers">
       <label>Select a future date:</label>
       <input type="date" id="futureDate">
       <button onclick="calculateFutureCycleDay()">Calculate</button>
@@ -139,13 +82,6 @@
     }
     function resetCurrentDay() {
       localStorage.removeItem("currentCycleDay");
-      localStorage.removeItem("periodDuration");
-      alert("Your saved current cycle day has been reset.");
-      document.getElementById("step2").style.display = "none";
-      document.getElementById("step1").style.display = "block";
-    }
-  </script>
-</body>
-</html>
+      loc
 
 
