@@ -3,20 +3,77 @@
 <head>
   <title>Cycle Tracker</title>
   <style>
-    body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #fdf6f0, #ffeaea); padding: 20px; color: #333; transition: background 1s ease-in-out; }
-    .container { max-width: 400px; margin: auto; background: linear-gradient(135deg, #ffffff, #ffeaea); border-radius: 12px; padding: 20px; box-shadow: 0 0 15px rgba(0,0,0,0.15); animation: fadeIn 1s ease; }
-    input, button { width: 100%; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #ddd; transition: transform 0.3s ease; }
-    button { background-color: #f7c8c8; border: none; }
-    button:hover { background-color: #f5b5b5; transform: scale(1.05); }
-    .result { margin-top: 20px; background: #fff0f0; padding: 15px; border-radius: 8px; text-align: center; animation: fadeIn 1s ease; }
-    .emoji-bounce { font-size: 2rem; display: inline-block; animation: bounce 1s infinite alternate; }
-    @keyframes bounce { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
-    @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fdf6f0, #ffeaea);
+      padding: 20px;
+      color: #333;
+      margin: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, #ffffff, #ffeaea);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease;
+    }
+    h2 {
+      text-align: center;
+      background: #fde2e2;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    label {
+      margin-top: 10px;
+      display: block;
+      font-weight: bold;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #f7c8c8;
+      border: none;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #f5b5b5;
+      transform: scale(1.05);
+    }
+    .result {
+      margin-top: 20px;
+      background: #fff0f0;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      animation: fadeIn 1s ease;
+    }
+    .emoji-bounce {
+      font-size: 2rem;
+      display: inline-block;
+      animation: bounce 1s infinite alternate;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2 style="text-align:center; background:#fde2e2; padding:10px; border-radius:8px;">Cycle Tracker <span class="emoji-bounce">🩸</span></h2>
+    <h2>Cycle Tracker <span class="emoji-bounce">🩸</span></h2>
     <div id="step1">
       <label>Enter your current cycle day:</label>
       <input type="number" id="currentDay" value="1">
