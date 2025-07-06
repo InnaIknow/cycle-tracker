@@ -82,6 +82,14 @@
     }
     function resetCurrentDay() {
       localStorage.removeItem("currentCycleDay");
-      loc
+      localStorage.removeItem("periodDuration");
+      alert("Your saved current cycle day has been reset.");
+      document.getElementById("step2").style.display = "none";
+      document.getElementById("step1").style.display = "block";
+    }
+  </script>
+</body>
+</html>
+
 
 
